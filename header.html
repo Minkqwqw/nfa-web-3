@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="header">
+    <video id="video-bg" src="./video/bg.mp4" autoplay muted loop></video>
+    <h1>Selamat Datang di Website Saya</h1>
+</body>
+
+
+<style>
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    /* h1 {
+        display: inline-block;
+        animation: spin 1s linear infinite;
+    } */
+
+    h1:hover {
+        animation: none;
+        transition: all 0.8s ease;
+    }
+
+</style>
+
+</html>

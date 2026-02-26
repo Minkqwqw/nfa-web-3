@@ -1,0 +1,86 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Gallery Header */
+.text-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 10;
+}
+
+.text-container h1{
+    color: white;
+}
+
+.header {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+/* Gallery Body */
+.gallery-body {
+    background-color: black;
+}
+
+/* Gallery */
+.marquee-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.marquee-row {
+  display: flex;
+  user-select: none;
+  gap: 20px;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 20px;
+  min-width: 100%;
+}
+
+.marquee-content img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Animasi ke Kiri */
+.to-left .marquee-content {
+  animation: scroll-left 30s linear infinite;
+}
+
+/* Animasi ke Kanan */
+.to-right .marquee-content {
+  animation: scroll-right 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 20px)); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(calc(-100% - 20px)); }
+  to { transform: translateX(0); }
+}
+
+.marquee-row:hover .marquee-content img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+}
